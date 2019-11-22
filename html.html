@@ -1,0 +1,108 @@
+<html> <head> </head>
+<body>
+<script src="https://www.desmos.com/api/v1.3/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+<div id="calculator" style="width: 1000px; height: 800px;"></div>
+
+<script src="api_base_revised.js"> </script>
+<script>
+f=0
+var elt = document.getElementById('calculator');
+var calculator = Desmos.GraphingCalculator(elt);
+calculator.expressionsCollapsed = true
+//TYPE WHAT YOU WANT IN THIS STRING use ^ as line break!!!!!
+var str = prompt()
+var array = Array.from(str)
+
+width = 0
+height = 0
+for (var i =0; i<array.length; i++){ 
+    array[i] = array[i].toLowerCase()
+    if (array[i] == "a"){
+        plotA(width, height, f)
+        f+=3
+    } else if (array[i] == "b") {
+        plotB(width, height,f)
+        f+=6
+    } else if (array[i] == "c") {
+        plotC(width, height,f)
+f+=1
+} else if (array[i] == "d") {
+    plotD(width, height,f)
+f+=4
+} else if (array[i] == "e") {
+    plotE(width, height,f)
+f+=4
+} else if (array[i] == "f") {
+    plotF(width, height,f)
+f+=3
+} else if (array[i] == "g") {
+    plotG(width, height,f)
+f+=3
+} else if (array[i] == "h") {
+    plotH(width, height,f)
+f+=3
+} else if (array[i] == "i") {
+    plotI(width, height,f)
+f+=1
+} else if (array[i] == "j") {
+    plotJ(width, height,f)
+f+=3
+} else if (array[i] == "k") {
+    plotK(width, height,f)
+f+=3
+} else if (array[i] == "l") {
+    plotL(width, height,f)
+f+=2
+} else if (array[i] == "m") {
+    plotM(width, height,f)
+f+=4
+} else if (array[i] == "n") {
+    plotN(width, height,f)
+f+=3
+} else if (array[i] == "o") {
+    plotO(width, height,f)
+f+=1
+} else if (array[i] == "p") {
+    plotP(width, height,f)
+f+=4
+} else if (array[i] == "q") {
+    plotQ(width, height,f)
+f += 2
+} else if (array[i] == "r") {
+    plotR(width, height,f)
+f+=5
+} else if (array[i] == "s") {
+    plotS(width, height,f)
+f+=4
+} else if (array[i] == "t") {
+    plotT(width, height,f)
+f+=2
+} else if (array[i] == "u") {
+    plotU(width, height,f)
+f+=3
+} else if (array[i] == "v") {
+    plotV(width, height,f)
+f+=2
+} else if (array[i] == "w") {
+    plotW(width, height,f)
+f+=4
+} else if (array[i] == "x") {
+    plotX(width, height,f)
+f+=2
+} else if (array[i] == "y") {
+    plotY(width, height,f)
+f+=3
+} else if (array[i] == "z") {
+    plotZ(width, height,f)
+f+=3
+}
+width += 2
+if (((width>70) && (array[i]==" ")) ||(array[i] == "^") ) {
+    width = 0
+    height-=4
+}
+
+}
+console.log(calculator.getState())
+</script>
+</body> </html>
